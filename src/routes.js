@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Experiencia from "./pages/Experiencia";
 import Inicio from "./pages/Inicio";
 
 function AppRoutes() {
@@ -7,6 +8,7 @@ function AppRoutes() {
           <Routes>
             
             <Route index element={<Inicio />} />
+            <Route path="experiencia" element={<Experiencia />} />
    
             </Routes>
         </BrowserRouter>

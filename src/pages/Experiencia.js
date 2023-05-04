@@ -2,14 +2,13 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Menu from '../components/Menu'
 
-const Inicio = () => {
+const Experiencia = () => {
   return (
     <>
     <Menu />
-    <Banner imagem="home" titulo="Boas Vindas ao #CodeChella2023" />
-
+    <Banner imagem="experiencia" titulo="A Experiência" />
     </>
   )
 }
 
-export default Inicio
+export default Experiencia

@@ -7,13 +7,13 @@ const Menu = () => {
     return (
         <nav className={styles.menu}>
             <div>
-                <Link>
+                <Link to={'/'}>
                     <img src={logo} alt='Logo do CodeChella' className={styles.logo}/>
                 </Link>
             </div>
 
-            <div>
-                <Link to={'#'} className={styles.link}>
+            <div className={styles.links}>
+                <Link to={'experiencia'} className={styles.link}>
                     A experiência
                 </Link>
 
