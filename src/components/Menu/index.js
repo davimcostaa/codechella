@@ -1,13 +1,32 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from './Logo-branco.png'
+import styles from './Menu.module.css'
 
 const Menu = () => {
     return (
-        <nav>
-            <div style={{backgroundColor: 'blue'}}>
+        <nav className={styles.menu}>
+            <div>
                 <Link>
-                    <img src={logo}/>
+                    <img src={logo} alt='Logo do CodeChella' className={styles.logo}/>
+                </Link>
+            </div>
+
+            <div>
+                <Link to={'#'} className={styles.link}>
+                    A experiência
+                </Link>
+
+                <Link to={'#'} className={styles.link}>
+                    Mapa de Setores
+                </Link>
+
+                <Link to={'#'} className={styles.link}>
+                    Informações
+                </Link>
+
+                <Link to={'#'} className={styles.link}>
+                    Ingresso
                 </Link>
             </div>
         </nav>
