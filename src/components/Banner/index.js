@@ -5,16 +5,14 @@ const Banner = ({imagem, titulo}) => {
 
     const tamanhoTitulo = titulo.length; 
 
-    if (tamanhoTitulo > 15) {
-                
-    }
+    
 
   return (
     
     <section className={styles.banner}
     style={{ backgroundImage: `url('/imagens/banner/${imagem}.png')`}}
     >
-        <h1 className={styles.titulo}> {titulo} </h1>
+      <h1 className={styles.titulo}> {titulo}  </h1>
     </section>
   )
 }

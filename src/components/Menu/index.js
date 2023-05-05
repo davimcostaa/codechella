@@ -13,7 +13,7 @@ const Menu = () => {
             </div>
 
             <div className={styles.links}>
-                <Link to={'experiencia'} className={styles.link}>
+                <Link to={'/experiencia'} className={styles.link}>
                     A experiência
                 </Link>
 

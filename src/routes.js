@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Experiencia from "./pages/Experiencia";
-import Inicio from "./pages/Inicio";
+import Experiencia from "./pages/Experiencia/Experiencia";
+import Inicio from "./pages/Inicio/Inicio";
 
 function AppRoutes() {
     return (
