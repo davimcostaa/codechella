@@ -18,8 +18,9 @@ const Info = ({imagem, titulo, texto, children}) => {
             <p className={styles.texto}>
                 {texto}
             </p>
+            {children}
         </div>
-        {children}
+        
     </div>
     </section>
     

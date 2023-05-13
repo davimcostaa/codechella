@@ -1,30 +1,143 @@
-
 {
-    "sabado":
-[
-    {
-        "id": 1,
-        "titulo": "O labirinto do Logcat",
-        "capa": "https://caelum-online-public.s3.amazonaws.com/2802-react-praticando/img2.png",
-        "link": "https://www.youtube.com/embed/ypvGqZGJBls"
-    },
-    {
-        "id": 2,
-        "titulo": "Um componente no espaço",
-        "capa": "https://caelum-online-public.s3.amazonaws.com/2802-react-praticando/img1.png",
-        "link": "https://www.youtube.com/embed/jK0uiQ1ZQQQ"
-    },
-    {
-        "id": 3,
-        "titulo": "O poderoso JavaScript",
-        "capa": "https://caelum-online-public.s3.amazonaws.com/2802-react-praticando/img4.png",
-        "link": "https://www.youtube.com/embed/N1BSG02z-Mw"
-    },
-    {
-        "id": 4,
-        "titulo": "Dart, o Caçador de Andróides",
-        "capa": "https://caelum-online-public.s3.amazonaws.com/2802-react-praticando/img3.png",
-        "link": "https://www.youtube.com/embed/LLmBWjF6F8M"
-    }
-]
+    "sabado": [
+        {
+            "headliner": [
+                {
+                    "id": 1,
+                    "nome": "System of a DOM"
+                }
+            ],
+
+            "lineup2": [
+                {
+                    "id": 2,
+                    "nome": "Python Maiden"
+                },
+                {
+                    "id": 3,
+                    "nome": "Apollo Client 2001"
+                },
+                {
+                    "id": 4,
+                    "nome": "Bon Java"
+                },
+                {
+                    "id": 5,
+                    "nome": "NickCallback"
+                }
+            ],
+
+            "lineup3": [
+                {
+                    "id": 6,
+                    "nome": "Linkin Promises"
+                },
+                {
+                    "id": 7,
+                    "nome": "Fullstack Fighters"
+                },
+                {
+                    "id": 8,
+                    "nome": "Papa React"
+                },
+                {
+                    "id": 9,
+                    "nome": "Angular in Chains"
+                }
+            ],
+
+            "lineup4": [
+                {
+                    "id": 10,
+                    "nome": "Agnostic Front-end"
+                },
+                {
+                    "id": 7,
+                    "nome": "SlipkNode"
+                },
+                {
+                    "id": 8,
+                    "nome": "Pink Flutter"
+                },
+                {
+                    "id": 9,
+                    "nome": "Kiss"
+                }
+            ]
+
+            
+        }
+    ],
+
+    "domingo":  [
+        {
+            "headliner": [
+                {
+                    "id": 10,
+                    "nome": "Lana Del Ploy"
+                }
+            ],
+
+            "lineup2": [
+                {
+                    "id": 11,
+                    "nome": "Dua Lib"
+                },
+                {
+                    "id": 12,
+                    "nome": "The Backnd"
+                },
+                {
+                    "id": 13, 
+                    "nome": "CSS Styles"
+                },
+                {
+                    "id": 14,
+                    "nome": "DJ Query"
+                },
+                {
+                    "id": 15,
+                    "nome": "ArrayAna Grande"
+                }
+            ],
+
+            "lineup3": [
+                {
+                    "id": 16,
+                    "nome": "Miley Cypress"
+                },
+                {
+                    "id": 17,
+                    "nome": "The Bootstrap Boys"
+                },
+                {
+                    "id": 18,
+                    "nome": "Json Derulo"
+                },
+                {
+                    "id": 19,
+                    "nome": "CloudPlay"
+                },
+                {
+                    "id": 20,
+                    "nome": "Dev Lovato"
+                }
+            ],
+
+            "lineup4": [
+                {
+                    "id": 21,
+                    "nome": "Kylie MiLOG"
+                },
+                {
+                    "id": 22,
+                    "nome": "Jenkins Brothers"
+                },
+                {
+                    "id": 23,
+                    "nome": "Rubycat Dolls"
+                }
+            ]  
+        }
+    ]
 }

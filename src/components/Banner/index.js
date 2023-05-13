@@ -3,8 +3,6 @@ import styles from './Banner.module.css'
 
 const Banner = ({imagem, titulo}) => {
 
-    const tamanhoTitulo = titulo.length; 
-
   return (
     
     <section className={styles.banner}
