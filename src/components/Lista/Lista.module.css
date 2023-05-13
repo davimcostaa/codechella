@@ -1,0 +1,39 @@
+
+.listaArtistas {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 16px;
+}
+
+.headliner {
+    font-family: var(--font-textos);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    color: var(--cinza);
+}
+
+.lineup2 {
+    font-family: var(--font-textos);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--cinza);
+}
+
+.lineup3 {
+    font-family: var(--font-textos);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--cinza);
+}
+
+.lineup4 {
+    font-family: var(--font-textos);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--cinza);
+}

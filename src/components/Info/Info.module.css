@@ -11,6 +11,7 @@
     justify-content: center;
     gap: 10px;
     margin: 64px 0 64px 0;
+    align-items: center;
 }
 
 .titulo {
@@ -33,3 +34,4 @@
 .imagem {
     width: 500px;
 }
+

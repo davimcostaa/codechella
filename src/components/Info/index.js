@@ -7,12 +7,13 @@ const Info = ({imagem, titulo, texto, children}) => {
         <div className={styles.container}>
         <div>
             <img 
+            alt='Foto'
             src={`/imagens/paginas/${imagem}.png`}
             className={styles.imagem}
             />
         </div>
 
-        <div>
+        <div className={styles.textos}>
             <h2 className={styles.titulo}>{titulo}</h2>
             <p className={styles.texto}>
                 {texto}

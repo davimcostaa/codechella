@@ -1,3 +1,12 @@
 .conteudo {
     background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
 }
+
+.titulo {
+    font-weight: 400;
+    font-size: 64px;
+    text-align: center;
+    color: var(--cinza);
+    padding: 32px 0 32px 0;
+}
+
