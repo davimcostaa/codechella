@@ -17,7 +17,7 @@ const Menu = () => {
                     A experiência
                 </Link>
 
-                <Link to={'#'} className={styles.link}>
+                <Link to={'/mapa'} className={styles.link}>
                     Mapa de Setores
                 </Link>
 
