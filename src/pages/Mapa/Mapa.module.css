@@ -1,0 +1,21 @@
+.conteudo {
+    background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+}
+
+.containerMapa {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.fotoMapa {
+    width: 690px;
+    height: 609px;
+}
+
+.titulo {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
