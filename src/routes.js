@@ -6,8 +6,7 @@ import Inicio from "./pages/Inicio/Inicio";
 function AppRoutes() {
     return (
         <BrowserRouter>
-          <Routes>
-            
+          <Routes>    
             <Route index element={<Inicio />} />
             <Route path="experiencia" element={<Experiencia />} />
             <Route path="mapa" element={<Mapa />}/>
