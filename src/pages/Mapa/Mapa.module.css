@@ -19,3 +19,17 @@
     font-size: 32px;
     margin-bottom: 24px;
 }
+
+.tituloSetores {
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--preto);
+    text-align: center;
+    margin-top: 48px;
+}
+
+.cards {
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
+}
