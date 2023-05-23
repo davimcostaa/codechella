@@ -12,6 +12,8 @@ function AppRoutes() {
             <Route index element={<Inicio />} />
             <Route path="experiencia" element={<Experiencia />} />
             <Route path="mapa" element={<Mapa />}/>
+            <Route path="informacoes" element={<Informacoes}/>
+            <Route path="comprar-ingresso" element={<ComprarIngresso />}/>
             
             </Routes>
         </BrowserRouter>
