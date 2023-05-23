@@ -1,9 +1,14 @@
 import React from 'react'
 import styles from './CardVertical.module.css'
 
-const CardVertical = ( {imagem, titulo, texto} ) => {
+const CardVertical = ( {imagem, titulo, texto, recuo} ) => {
   return (
-    <div className={styles.container}>
+    <>
+  
+    {
+      recuo
+      ?
+      <div className={styles.containerRecuo}>
           <div>
                 <img 
                 alt='Foto'
@@ -20,6 +25,28 @@ const CardVertical = ( {imagem, titulo, texto} ) => {
           </div>
 
          </div> 
+         :
+         <div className={styles.container}>
+          <div>
+                <img 
+                alt='Foto'
+                src={`/imagens/paginas/${imagem}.png`}
+                className={styles.imagem}
+                />
+            </div>
+
+          <div className={styles.textos}>
+              <h2 className={styles.titulo}>{titulo}</h2>
+              <p className={styles.texto}>
+                  {texto}
+              </p>
+          </div>
+
+         </div> 
+    }
+
+    
+         </>
   )
 }
 

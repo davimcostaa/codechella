@@ -21,7 +21,7 @@ const Menu = () => {
                     Mapa de Setores
                 </Link>
 
-                <Link to={'#'} className={styles.link}>
+                <Link to={'/informacoes'} className={styles.link}>
                     Informações
                 </Link>
 

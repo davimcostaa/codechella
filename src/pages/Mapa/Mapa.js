@@ -36,7 +36,7 @@ const Mapa = () => {
 
     <div className={styles.cards}>
       <CardVertical imagem="Mapa de setores2" titulo="Pista" texto="Pista convencional, atendida pelos bares e banheiros das laterais do estádio. Espaço amplo, com local para sentar e descansar. Separada da pista premium por uma grade."/>
-      <CardVertical imagem="Mapa de setores3" titulo="Pista Premium" texto="Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área."/>
+      <CardVertical recuo="sim" imagem="Mapa de setores3" titulo="Pista Premium" texto="Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área."/>
       <CardVertical imagem="Mapa de setores4" titulo="Cadeiras" texto="Opção de cadeiras térreas ou elevadas. Acesso próximo a banheiros e bares, visão um pouco elevada em relação às pistas."/>
     </div>
     </section>

@@ -30,6 +30,5 @@
 
 .cards {
     display: flex;
-    margin-left: 40px;
-    margin-right: 40px;
+    justify-content: space-around;
 }
