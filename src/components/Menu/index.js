@@ -25,7 +25,7 @@ const Menu = () => {
                     Informações
                 </Link>
 
-                <Link to={'#'} className={styles.link}>
+                <Link to={'/comprar-ingresso'} className={styles.link}>
                     Ingresso
                 </Link>
             </div>

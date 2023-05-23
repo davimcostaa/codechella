@@ -1,0 +1,58 @@
+.titulo {
+    font-family: 'Calistoga';
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    color: var(--cinza);
+    padding-top: 48px;
+}
+
+.conteudo { 
+    background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+}
+
+.form {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--cinza);
+}
+
+.inputField {
+    width: 795px;
+    height: 40px;
+}
+
+.botao {
+    width: 164px;
+    height: 56px;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 16px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
