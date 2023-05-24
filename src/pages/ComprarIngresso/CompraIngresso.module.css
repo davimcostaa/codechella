@@ -56,3 +56,11 @@
 .botao:hover {
     cursor: pointer;
 }
+
+.erro {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FF6347		;
+}
