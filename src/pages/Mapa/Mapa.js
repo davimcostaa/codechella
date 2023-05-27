@@ -3,11 +3,19 @@ import CardVertical from 'components/CardVertical'
 import Legenda from 'components/Legenda'
 import Menu from 'components/Menu'
 import Rodape from 'components/Rodape'
-import React from 'react'
+import React, { useState } from 'react'
 import mapa from './Mapa setores 1.png'
+import mapaCadeirasSuperiores from './cadeiras_superiores.png'
+import mapaCadeirasTerreo from './cadeiras_terreo.png'
+import mapaPistaPremium from './pista_premium.png'
+import mapaPista from './pista.png'
 import styles from './Mapa.module.css'
 
 const Mapa = () => {
+
+  const [fotoMapa, setFotoMapa] = useState(mapa) 
+
+
   return (
     <>
     
@@ -17,15 +25,27 @@ const Mapa = () => {
     <section className={styles.conteudo}>
 
     <section className={styles.containerMapa}>
-        <img src={mapa} alt='Mapa' className={styles.fotoMapa}/>
+        <img src={fotoMapa} alt='Mapa' className={styles.fotoMapa}/>
 
         <div className={styles.setores}>
               <h2 className={styles.titulo}>Legenda:</h2>
 
-              <Legenda imagem="pista-premium" legenda="Pista premium"/>
-              <Legenda imagem="pista" legenda="Pista comum"/>
-              <Legenda imagem="cadeiras-terreo" legenda="Cadeiras térreo"/>
-              <Legenda imagem="cadeiras-superior" legenda="Cadeiras superiores"/>
+              <div onClick={() => setFotoMapa(mapaPistaPremium)} className={styles.divLegenda}> 
+                <Legenda imagem="pista-premium" legenda="Pista premium"/>
+              </div>
+
+              <div onClick={() => setFotoMapa(mapaPista)} className={styles.divLegenda}>
+                  <Legenda imagem="pista" legenda="Pista comum"/>
+              </div>
+      
+              <div onClick={() => setFotoMapa(mapaCadeirasTerreo)} className={styles.divLegenda}>
+                <Legenda imagem="cadeiras-terreo" legenda="Cadeiras térreo"/>
+              </div>
+
+              <div onClick={() => setFotoMapa(mapaCadeirasSuperiores)} className={styles.divLegenda}> 
+                <Legenda imagem="cadeiras-superior" legenda="Cadeiras superiores"/>
+              </div>
+              
         </div>
 
     </section>
