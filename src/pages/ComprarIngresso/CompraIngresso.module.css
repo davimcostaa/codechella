@@ -62,5 +62,16 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    color: #FF6347		;
+    color: #FF6347;
+}
+
+.containerInputs {
+    display: flex;
+    width: fit-content;
+    gap: 24px;
+}
+
+.inputFieldShared {
+    width: 385.5px;
+    height: 40px;
 }

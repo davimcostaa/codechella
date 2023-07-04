@@ -1,14 +1,20 @@
 import Banner from 'components/Banner'
 import Menu from 'components/Menu'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './CompraIngresso.module.css'
 import Rodape from 'components/Rodape'
 import { FaArrowRight } from 'react-icons/fa';
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { IngressoContext, IngressoProvider } from 'common/context/Ingresso'
+import { useNavigate } from 'react-router-dom'
 
 const ComprarIngresso = () => {
+
+    const navigate = useNavigate();
+    const {  formData, setFormData  } = useContext(IngressoContext);
+    console.log(formData)
 
     const schema = yup.object().shape({
         nomeCompleto: yup.string()
@@ -27,7 +33,8 @@ const ComprarIngresso = () => {
     });
 
     const onSubmit = (data) => {
-        console.log(data)
+        setFormData(data)
+        navigate('/ingresso')
     }
   
   return (
@@ -63,18 +70,39 @@ const ComprarIngresso = () => {
                         <p className={styles.erro}>{errors.email?.message}</p>
                 </div>
 
+                <div className={styles.containerInputs}>
+
+                
+                <div className={styles.inputBox}>
+                        <label htmlFor="name" className={styles.label}>
+                            Tipo de ingresso:
+                        </label>
+
+                        <div>
+                            <select className={styles.inputFieldShared} {...register("tipo")}>
+                                <option disabled>Tipo do ingresso</option>
+                                <option value="Pista premium" >Pista premium</option>
+                                <option value="Pista">Pista</option>
+                                <option value="Comum">Comum</option>
+                            </select>
+                        </div>
+
+
+                </div>
+
                 <div className={styles.inputBox}>
                         <label htmlFor="name" className={styles.label}>
                             Data de nascimento:
                         </label>
 
                         <div>
-                                <input type="date" id="data" name="data"  className={styles.inputField} {...register("dataNascimento")}/>
+                                <input type="date" id="data" name="data"  className={styles.inputFieldShared} {...register("dataNascimento")}/>
                         </div>
 
                         <p className={styles.erro}>{errors.dataNascimento?.message}</p>
                 </div>
 
+                </div>
 
                 <button type="submit" className={styles.botao}>
                     Avançar! 
