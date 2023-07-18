@@ -1,0 +1,51 @@
+.conteudo {
+    background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: var(--cinza);
+    padding: 32px 0 32px 0;
+}
+
+
+.ingresso {
+
+    background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+    width: 792px;
+    height: 350px;   
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.15);
+    padding: 32px;
+}
+
+.topo {
+    display: flex;    
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    margin-top: 32px;
+    gap: 48px;
+}
+
+.info_titulo {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: var(--cinza);
+    margin-bottom: 24px;
+}
+
+.infos {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--cinza);
+    margin-bottom: 15px;
+}
