@@ -15,12 +15,12 @@
 
 
 .ingresso {
-
     background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
     width: 792px;
     height: 350px;   
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.15);
     padding: 32px;
+    margin-bottom: 40px;
 }
 
 .topo {
@@ -48,4 +48,13 @@
     font-weight: 500;
     color: var(--cinza);
     margin-bottom: 15px;
+}
+
+.imprimir {
+    color: var(--cinza);
+    margin-bottom: 15px;
+}
+
+.imprimir:hover{
+    cursor: pointer;
 }

@@ -7,14 +7,13 @@ import { FaArrowRight } from 'react-icons/fa';
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import { IngressoContext, IngressoProvider } from 'common/context/Ingresso'
+import { IngressoContext } from 'common/context/Ingresso'
 import { useNavigate } from 'react-router-dom'
 
 const ComprarIngresso = () => {
 
     const navigate = useNavigate();
-    const {  formData, setFormData  } = useContext(IngressoContext);
-    console.log(formData)
+    const {  setFormData  } = useContext(IngressoContext);
 
     const schema = yup.object().shape({
         nomeCompleto: yup.string()
@@ -25,7 +24,18 @@ const ComprarIngresso = () => {
         email: yup.string()
                 .email('Digite um email válido!')
                 .required('O campo e-mail é obrigatório!'),
-        dataNascimento: yup.string().required('O data é obrigatória!'),
+        dataNascimento: yup.string().required('A data é obrigatória!')
+        .test('maiorIdade', 'Você deve ter pelo menos 18 anos para prosseguir.', function (value) {
+            // Função de validação personalizada para verificar a idade
+            const dataAtual = new Date();
+            const dataNascimento = new Date(value);
+            let idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+            const diffMes = dataAtual.getMonth() - dataNascimento.getMonth();
+            if (diffMes < 0 || (diffMes === 0 && dataAtual.getDate() < dataNascimento.getDate())) {
+                idade--;
+            }
+            return idade >= 18;
+        }),
     })
 
     const { register, handleSubmit, formState: {errors} } = useForm({
