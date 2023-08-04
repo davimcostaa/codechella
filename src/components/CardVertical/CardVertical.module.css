@@ -43,3 +43,9 @@
     color: var(--cinza);
 }
 
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: row;
+    }
+}

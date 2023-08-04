@@ -37,3 +37,12 @@
     font-size: 25px;
     color: var(--cinza);
 }
+
+
+@media (max-width: 768px) {
+    .listaArtistas{
+       flex-wrap: wrap;
+    }
+    
+    
+}

@@ -45,3 +45,20 @@
 .lineup {
     margin-top: 56px;
 }
+
+@media (max-width: 768px) {
+
+    .titulo:before, .titulo:after  {
+        display: none;
+    }
+
+    .listas {
+       display: flex;
+       flex-direction: column;
+       flex-grow: 1;
+       flex-wrap: wrap;
+       margin-left: 60px;
+       margin-right: 60px;
+    }
+    
+}
