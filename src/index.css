@@ -15,8 +15,3 @@
   margin: 0;
 }
 
-@media (max-width: 300px) {
-    * {
-      width: 300px;
-    }
-}

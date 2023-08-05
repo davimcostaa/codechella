@@ -11,8 +11,9 @@
     text-align: center;
     color: var(--cinza);
     padding: 32px 0 32px 0;
+    margin-right: 20px;
+    margin-left: 20px;
 }
-
 
 .ingresso {
     background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
@@ -57,4 +58,33 @@
 
 .imprimir:hover{
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ingresso {
+        width: 648px;
+        height: 600px;  
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .infos {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 740px) {
+
+    .ingresso {
+        width: 312px; 
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
 }

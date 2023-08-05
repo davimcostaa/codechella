@@ -13,7 +13,6 @@
 .foto {
     margin-top: 56px;
     width: 100%;
-    height: fit-content;
 }
 
 .botao {
@@ -40,4 +39,12 @@
 .containerBotao {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1200px) {
+
+    .foto {
+        align-self: stretch;
+    }
+    
 }

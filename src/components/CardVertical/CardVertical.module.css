@@ -5,6 +5,7 @@
     margin-top: 32px;
     width: 382.4px;
     margin-bottom: 48px;
+    align-items: center;
 }
 
 .containerRecuo {
@@ -27,6 +28,7 @@
     font-weight: 700;
     font-size: 32px;
     color: var(--cinza);
+    
 }
 
 .textos {
@@ -46,6 +48,19 @@
 @media (max-width: 768px) {
 
     .container {
-        flex-direction: row;
+       margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 90%;
+        align-content: center;
+     }
+
+    .imagem {
+        width: 322px;
+        
     }
 }

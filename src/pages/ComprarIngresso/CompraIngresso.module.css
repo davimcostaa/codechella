@@ -5,6 +5,8 @@
     text-align: center;
     color: var(--cinza);
     padding-top: 48px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .conteudo { 
@@ -74,4 +76,35 @@
 .inputFieldShared {
     width: 385.5px;
     height: 40px;
+}
+
+@media (max-width: 1200px) {
+
+    .form {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .inputField, .inputFieldShared {
+        width: 640px;
+        height: 40px;
+    }
+
+    .containerInputs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 730px) {
+
+    .form {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .inputField, .inputFieldShared {
+        width: 312px;
+        height: 40px;
+    }
+
 }

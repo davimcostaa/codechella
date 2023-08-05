@@ -2,11 +2,14 @@ import React from 'react'
 import styles from './CardVertical.module.css'
 
 const CardVertical = ( {imagem, titulo, texto, recuo} ) => {
+
+  const larguraTela = window.screen.width;
+
   return (
     <>
   
     {
-      recuo
+      recuo && larguraTela > 800
       ?
       <div className={styles.containerRecuo}>
           <div>

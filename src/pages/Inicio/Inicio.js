@@ -25,17 +25,14 @@ const Inicio = () => {
         >
 
           <div className={styles.containerBotao}>
-            <Link className={styles.botao} to={"/ingresso"}>
+            <Link className={styles.botao} to={"/comprar-ingresso"}>
             <div className={styles.divBotao}>
               Comprar impresso!
               <img src={icone} alt="Icone de bilhete" />
             </div>
             </Link> 
           </div>
-  
-
-        
-
+          
       </Info>
 
       <LineUp dia="SÁBADO <11/03>">

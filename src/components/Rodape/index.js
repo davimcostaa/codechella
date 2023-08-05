@@ -9,29 +9,29 @@ const Rodape = () => {
   return (
     <footer className={styles.rodape}>
 
-        <div>
-            <img src={logo} className={styles.logo}/>
+        <div className={styles.primeiraParte}>
+            <img src={logo} className={styles.logo} alt='Logo do CodeChella' />
             <div className={styles.social}>
               <p>Acesse nossas redes:</p>
               <ul>
                 <li>
                   <a href='https://www.whatsapp.com'>
-                    <img src={whatsapp} />
+                    <img src={whatsapp} alt='Logo do whatsapp' />
                   </a>
                 </li>
                 <li>
                   <a href=''>
-                    <img src={twitch} />
+                    <img src={twitch} alt='Logo da twitch' />
                   </a>
                 </li>
                 <li>
                   <a href=''>
-                    <img src={instagram} />
+                    <img src={instagram}  alt='Logo do Instagram' />
                   </a>
                 </li>
                 <li>
                   <a href=''>
-                    <img src={twitter} />
+                    <img src={twitter}  alt='Logo do twitter' />
                   </a>
                 </li>
               </ul>

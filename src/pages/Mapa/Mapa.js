@@ -15,7 +15,6 @@ const Mapa = () => {
 
   const [fotoMapa, setFotoMapa] = useState(mapa) 
 
-
   return (
     <>
     
