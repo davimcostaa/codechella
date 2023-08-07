@@ -1,16 +1,24 @@
+import classNames from 'classnames'
+import { TemaContext } from 'common/context/Tema'
 import Info from 'components/Info'
 import Rodape from 'components/Rodape'
-import React from 'react'
+import React, { useContext } from 'react'
 import Banner from '../../components/Banner'
 import Menu from '../../components/Menu'
 import styles from './Experiencia.module.css'
 
 const Experiencia = () => {
+  const { temaBoreal } = useContext(TemaContext);
+  const imagem = temaBoreal ? 'experiencia2' : 'experiencia';
+
   return (
     <>
     <Menu />
-    <Banner imagem="experiencia" titulo="A Experiência" />
-    <section className={styles.conteudo}>
+    <Banner imagem={imagem} titulo="A Experiência" />
+    <section className={classNames({
+            [styles.conteudo]: true,
+            [styles.conteudoBoreal]: temaBoreal === true
+        })}>
 
     <Info imagem="experiencia1" 
     titulo="Acessibilidade e Inclusão"

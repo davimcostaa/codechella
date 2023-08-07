@@ -2,12 +2,20 @@
     background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
 }
 
+.conteudoBoreal {
+    background: linear-gradient(180deg, #393068 0%, #36C1A0 52.60%, #4650BD 100%);
+}
+
 .titulo {
     font-weight: 400;
     font-size: 64px;
     text-align: center;
     color: var(--cinza);
     padding: 32px 0 32px 0;
+}
+
+.branco {
+    color: var(--branco);
 }
 
 .foto {
@@ -46,5 +54,4 @@
     .foto {
         align-self: stretch;
     }
-    
 }

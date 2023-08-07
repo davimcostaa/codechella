@@ -38,6 +38,10 @@
     color: var(--cinza);
 }
 
+.branco {
+    color: var(--branco);
+}
+
 
 @media (max-width: 768px) {
     .listaArtistas{

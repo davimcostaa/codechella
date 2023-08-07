@@ -14,7 +14,14 @@
     font-weight: 400;
     font-size: 64px;
     margin-top: 0;
-    
+}
+
+.tituloBoreal {
+    font-family: var(--font-titulo);
+    color: var(--branco);
+    font-weight: 400;
+    font-size: 64px;
+    margin-top: 0;
 }
 
 @media (max-width: 1200px) {

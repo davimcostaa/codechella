@@ -7,6 +7,11 @@
     padding-bottom: 60px;
 }
 
+.rodapeBoreal {
+    background-color: var(--roxo-boreal);
+    color: var(--branco);
+}
+
 .social {
     display: flex;
     align-items: center;

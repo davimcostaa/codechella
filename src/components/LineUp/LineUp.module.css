@@ -11,10 +11,43 @@
     margin-left: 20px;
 }
 
-.titulo:after {
+.tituloBoreal {
+    background-color: var(--verde-escuro);
+    font-weight: 500;
+    font-size: 48px;
+    color: var(--branco);
+    width: fit-content;
+    text-align: center;
+    padding: 16px;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.tituloBoreal:after{
+    background-color: var(--verde-escuro);
     content: "";
     position: absolute;
     top: 50%; /* posição da linha abaixo do título */
+    height: 2px;
+    right: -400px;
+    width: 359.5px;
+} 
+
+.tituloBoreal:before{
+    background-color: var(--verde-escuro);
+    content: "";
+    position: absolute;
+    left: -400px;
+    top: 50%; 
+    height: 2px;
+    width: 359.5px;
+} 
+
+.titulo:after {
+    content: "";
+    position: absolute;
+    top: 50%; 
     height: 2px;
     right: -400px;
     width: 359.5px;
@@ -25,7 +58,7 @@
     content: "";
     position: absolute;
     left: -400px;
-    top: 50%; /* posição da linha à esquerda do elemento */
+    top: 50%; 
     height: 2px;
     width: 359.5px;
     background-color: var(--mostarda);

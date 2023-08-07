@@ -1,4 +1,6 @@
-import React from 'react'
+import classNames from 'classnames';
+import { TemaContext } from 'common/context/Tema';
+import React, { useContext } from 'react'
 import styles from './Info.module.css'
 
 const Info = ({imagem, titulo, texto, children}) => {
@@ -7,11 +9,15 @@ const Info = ({imagem, titulo, texto, children}) => {
   const sequenciaImagem = parseInt(ultimaLetra);
   const larguraTela = window.screen.width;
 
-  return (
-    <section className={styles.info}>
+  const { temaBoreal } = useContext(TemaContext);
 
-      {
-        sequenciaImagem % 2 === 0 && larguraTela > 800 ? (
+  return (
+    <section className={classNames({
+      [styles.info]: true,
+      [styles.branco]: temaBoreal === true
+  })}>
+
+      { sequenciaImagem % 2 === 0 && larguraTela > 800 ? (
           <div className={styles.container}>
             <div className={styles.textos}>
                 <h2 className={styles.titulo}>{titulo}</h2>

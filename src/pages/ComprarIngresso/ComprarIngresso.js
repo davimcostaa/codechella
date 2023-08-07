@@ -14,7 +14,7 @@ const ComprarIngresso = () => {
 
     const navigate = useNavigate();
     const {  setFormData  } = useContext(IngressoContext);
-
+    
     const schema = yup.object().shape({
         nomeCompleto: yup.string()
             .min(4, 'O nome precisa ter mais de 10 caracteres!')

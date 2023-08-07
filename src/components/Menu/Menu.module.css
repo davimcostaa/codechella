@@ -6,6 +6,18 @@
     height: 100px;
 }
 
+.boreal {
+  background-color: var(--roxo-boreal);
+}
+
+.divTema {
+  margin-left: 60px;
+}
+
+.divTema:hover {
+  cursor: pointer;
+}
+
 .logo {
     width: 60%;
 }
