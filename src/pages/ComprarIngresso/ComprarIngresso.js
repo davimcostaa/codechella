@@ -9,12 +9,16 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { IngressoContext } from 'common/context/Ingresso'
 import { useNavigate } from 'react-router-dom'
+import { TemaContext } from 'common/context/Tema'
+import classNames from 'classnames'
 
 const ComprarIngresso = () => {
 
     const navigate = useNavigate();
     const {  setFormData  } = useContext(IngressoContext);
-    
+    const { temaBoreal } = useContext(TemaContext);
+    const imagem = temaBoreal ? 'ingresso-boreal' : 'ingresso1';
+  
     const schema = yup.object().shape({
         nomeCompleto: yup.string()
             .min(4, 'O nome precisa ter mais de 10 caracteres!')
@@ -50,14 +54,29 @@ const ComprarIngresso = () => {
   return (
     <>
         <Menu />
-        <Banner imagem="ingresso1" titulo={"Garanta seu ingresso"} />
+        <Banner imagem={imagem} titulo={"Garanta seu ingresso"} />
 
-        <section className={styles.conteudo}>
-            <h2 className={styles.titulo}>Preencha o formulário a seguir:</h2>
+        <section className={classNames({
+            [styles.conteudo]: true,
+            [styles.conteudoBoreal]: temaBoreal === true
+        })}>
+            <h2 className={classNames({
+                [styles.titulo]: true,
+                [styles.branco]: temaBoreal === true
+            })}>Preencha o formulário a seguir:</h2>
 
-            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <form 
+                className={classNames({
+                    [styles.form]: true,
+                    [styles.branco]: temaBoreal === true
+                })} 
+                
+                onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.inputBox}>
-                        <label htmlFor="name" className={styles.label}>
+                        <label htmlFor="name" className={classNames({
+                            [styles.label]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>
                             Nome Completo:
                         </label>
 
@@ -65,11 +84,17 @@ const ComprarIngresso = () => {
                                 <input type="text" id="name" name="name" className={styles.inputField} {...register("nomeCompleto")}/>
                         </div>
 
-                        <p className={styles.erro}>{errors.nomeCompleto?.message}</p>
+                        <p className={classNames({
+                            [styles.erro]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>{errors.nomeCompleto?.message}</p>
                 </div>
 
                 <div className={styles.inputBox}>
-                        <label htmlFor="name" className={styles.label}>
+                        <label htmlFor="name" className={classNames({
+                            [styles.label]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>
                             Email:
                         </label>
 
@@ -77,14 +102,19 @@ const ComprarIngresso = () => {
                                 <input type="text" id="email" name="email" className={styles.inputField} {...register("email")} />
                         </div>
 
-                        <p className={styles.erro}>{errors.email?.message}</p>
+                        <p className={classNames({
+                            [styles.erro]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>{errors.email?.message}</p>
                 </div>
 
                 <div className={styles.containerInputs}>
-
-                
+        
                 <div className={styles.inputBox}>
-                        <label htmlFor="name" className={styles.label}>
+                        <label htmlFor="name" className={classNames({
+                            [styles.label]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>
                             Tipo de ingresso:
                         </label>
 
@@ -101,7 +131,10 @@ const ComprarIngresso = () => {
                 </div>
 
                 <div className={styles.inputBox}>
-                        <label htmlFor="name" className={styles.label}>
+                        <label htmlFor="name" className={classNames({
+                            [styles.label]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>
                             Data de nascimento:
                         </label>
 
@@ -109,7 +142,10 @@ const ComprarIngresso = () => {
                                 <input type="date" id="data" name="data"  className={styles.inputFieldShared} {...register("dataNascimento")}/>
                         </div>
 
-                        <p className={styles.erro}>{errors.dataNascimento?.message}</p>
+                        <p className={classNames({
+                            [styles.erro]: true,
+                            [styles.branco]: temaBoreal === true
+                        })}>{errors.dataNascimento?.message}</p>
                 </div>
 
                 </div>

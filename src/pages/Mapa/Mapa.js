@@ -3,25 +3,32 @@ import CardVertical from 'components/CardVertical'
 import Legenda from 'components/Legenda'
 import Menu from 'components/Menu'
 import Rodape from 'components/Rodape'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import mapa from './Mapa setores 1.png'
 import mapaCadeirasSuperiores from './cadeiras_superiores.png'
 import mapaCadeirasTerreo from './cadeiras_terreo.png'
 import mapaPistaPremium from './pista_premium.png'
 import mapaPista from './pista.png'
 import styles from './Mapa.module.css'
+import { TemaContext } from 'common/context/Tema'
+import classNames from 'classnames'
 
 const Mapa = () => {
 
   const [fotoMapa, setFotoMapa] = useState(mapa) 
+  const { temaBoreal } = useContext(TemaContext);
+  const imagem = temaBoreal ? 'mapa2' : 'mapa de setores';
 
   return (
     <>
     
     <Menu />
-    <Banner imagem="mapa de setores" titulo="Mapa de Setores" />
-
-    <section className={styles.conteudo}>
+    <Banner imagem={imagem} titulo="Mapa de Setores" />
+    
+    <section className={classNames({
+            [styles.conteudo]: true,
+            [styles.conteudoBoreal]: temaBoreal === true
+        })}>
 
     <section className={styles.containerMapa}>
         <img src={fotoMapa} alt='Mapa' className={styles.fotoMapa}/>

@@ -28,7 +28,6 @@
     font-weight: 700;
     font-size: 32px;
     color: var(--cinza);
-    
 }
 
 .textos {
@@ -43,6 +42,10 @@
     line-height: 40px;
     text-align: center;
     color: var(--cinza);
+}
+
+.branco {
+    color: var(--branco);
 }
 
 @media (max-width: 768px) {
