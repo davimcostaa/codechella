@@ -1,8 +1,6 @@
 import Banner from 'components/Banner'
-import Menu from 'components/Menu'
 import React, { useContext } from 'react'
 import styles from './CompraIngresso.module.css'
-import Rodape from 'components/Rodape'
 import { FaArrowRight } from 'react-icons/fa';
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -29,8 +27,7 @@ const ComprarIngresso = () => {
                 .email('Digite um email válido!')
                 .required('O campo e-mail é obrigatório!'),
         dataNascimento: yup.string().required('A data é obrigatória!')
-        .test('maiorIdade', 'Você deve ter pelo menos 18 anos para prosseguir.', function (value) {
-            // Função de validação personalizada para verificar a idade
+        .test('maiorIdade', 'Evento para pessoas maiores de idade.', function (value) {
             const dataAtual = new Date();
             const dataNascimento = new Date(value);
             let idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
@@ -53,13 +50,9 @@ const ComprarIngresso = () => {
   
   return (
     <>
-        <Menu />
         <Banner imagem={imagem} titulo={"Garanta seu ingresso"} />
 
-        <section className={classNames({
-            [styles.conteudo]: true,
-            [styles.conteudoBoreal]: temaBoreal === true
-        })}>
+        <section>
             <h2 className={classNames({
                 [styles.titulo]: true,
                 [styles.branco]: temaBoreal === true
@@ -160,8 +153,6 @@ const ComprarIngresso = () => {
 
         </section>
 
-
-        <Rodape />
     </>
 
   )

@@ -6,12 +6,14 @@ import ComprarIngresso from "pages/ComprarIngresso/ComprarIngresso";
 import { IngressoProvider } from "common/context/Ingresso";
 import Ingresso from "pages/Ingresso/Ingresso";
 import { TemaProvider } from "common/context/Tema";
+import PaginaPadrao from "components/PaginaPadrao";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
         <TemaProvider>
             <Routes>
+                <Route path='/' element={<PaginaPadrao />}>
                     <Route index element={<Inicio />} />
                     <Route path="experiencia" element={<Experiencia />} />
                     <Route path="mapa" element={<Mapa />} />
@@ -29,6 +31,7 @@ function AppRoutes() {
                             </IngressoProvider>
                         } 
                     />
+                </Route>                    
                 </Routes>
         </TemaProvider>
     </BrowserRouter>

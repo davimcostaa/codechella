@@ -1,10 +1,8 @@
 import Info from 'components/Info'
 import LineUp from 'components/LineUp'
 import Lista from 'components/Lista'
-import Rodape from 'components/Rodape'
 import React, { useContext } from 'react'
 import Banner from '../../components/Banner'
-import Menu from '../../components/Menu'
 import styles from './Inicio.module.css'
 import json from 'json/db.json'
 import foto from './home.png'
@@ -23,13 +21,10 @@ const Inicio = () => {
 
   return (
     <>
-    <Menu />
+
     <Banner imagem={imagem} titulo={"Boas-vindas ao #CodeChella2023!"} />
 
-    <section className={classNames({
-            [styles.conteudo]: true,
-            [styles.conteudoBoreal]: temaBoreal === true
-        })}>
+    <section>
       <h2 className={classNames({
             [styles.titulo]: true,
             [styles.branco]: temaBoreal === true
@@ -67,7 +62,7 @@ const Inicio = () => {
     <img src={imagemSecundaria} alt='Jovens se divertindo no festival' className={styles.foto}/>
     </section>
 
-    <Rodape />
+
     </>
     
     )

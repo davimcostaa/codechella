@@ -1,36 +1,46 @@
 import { IngressoContext } from 'common/context/Ingresso';
 import Banner from 'components/Banner'
-import Menu from 'components/Menu'
-import Rodape from 'components/Rodape';
 import React, { useContext, useRef } from 'react'
 import { useReactToPrint } from 'react-to-print';
 import styles from './Ingresso.module.css'
 import { IoMdPrint } from 'react-icons/io';
+import { TemaContext } from 'common/context/Tema';
+import classNames from 'classnames';
 
 
 const Ingresso = () => {
 
   const {  formData  } = useContext(IngressoContext);
+  const { temaBoreal } = useContext(TemaContext);
+  const imagem = temaBoreal ? 'ingresso3' : 'ingresso2';
+  const logo = temaBoreal ? 'branco' : 'cinza';
+
   const componentRef = useRef();
 
   const imprimirIngresso = useReactToPrint({
     content: () => componentRef.current,
   });
   
-
   return (
     <>
-    
-        <Menu />
-        <Banner imagem="ingresso2" titulo="Seu ingresso está aqui!" />
+        <Banner imagem={imagem} titulo="Seu ingresso está aqui!" />
 
-        <section className={styles.conteudo} ref={componentRef}>
-            <h2 className={styles.titulo}>Uhul, agora sim! Seu ingresso está aqui, <br /> apresente na entrada do evento e divirta-se!</h2>
-            <div className={styles.ingresso}>
+        <section className={classNames({
+            [styles.conteudo]: true
+        })} ref={componentRef}>
+
+            <h2 className={classNames({
+            [styles.titulo]: true,
+            [styles.branco]: temaBoreal === true,
+        })}>  Uhul, agora sim! Seu ingresso está aqui, <br /> apresente na entrada do evento e divirta-se!</h2>
+            <div className={classNames({
+            [styles.ingresso]: true,
+            [styles.conteudoBoreal]: temaBoreal === true,
+            [styles.branco]: temaBoreal === true,
+        })}>
               <div className={styles.topo}>
-                  <img src='/imagens/logo-cinza.png' alt='Logo cinza do CodeChella' />
+                  <img src={`/imagens/logo-${logo}.png`} alt='Logo cinza do CodeChella' />
                   <img src='/imagens/favicon-branco.png' alt='Favicon branco' />
-      
               </div>
 
               <div className={styles.info}>
@@ -39,18 +49,34 @@ const Ingresso = () => {
                   </div>
 
                   <div>
-                      <h3 className={styles.info_titulo}>{formData.nomeCompleto}</h3>
-                      <p className={styles.infos}>Ingresso Cortesia</p>
-                      <p className={styles.infos}>{formData.tipo}</p>
-                      <p className={styles.infos}>Data: 11/03</p>
-                      <p className={styles.infos}>Local: São Paulo</p>
+                      <h3 className={classNames({
+                          [styles.info_titulo]: true,
+                          [styles.branco]: temaBoreal === true,
+                      })}> {formData.nomeCompleto} </h3>
+                      <p className={classNames({
+                          [styles.infos]: true,
+                          [styles.branco]: temaBoreal === true,
+                      })}> Ingresso Cortesia</p>
+                      <p className={classNames({
+                          [styles.infos]: true,
+                          [styles.branco]: temaBoreal === true,
+                      })}>{formData.tipo}</p>
+                      <p className={classNames({
+                          [styles.infos]: true,
+                          [styles.branco]: temaBoreal === true,
+                      })}>Data: 11/03</p>
+                      <p className={classNames({
+                          [styles.infos]: true,
+                          [styles.branco]: temaBoreal === true,
+                      })}>Local: São Paulo</p>
                   </div>
               </div>
             </div>
-            <p className={styles.imprimir} onClick={imprimirIngresso}> <IoMdPrint size={30}/></p>
+            <p className={classNames({
+                          [styles.imprimir]: true,
+                          [styles.branco]: temaBoreal === true,
+                      })} onClick={imprimirIngresso}> <IoMdPrint size={30}/></p>
         </section>
-
-    <Rodape />
     
     </>
   )

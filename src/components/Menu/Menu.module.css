@@ -84,6 +84,10 @@
 
 @media (max-width: 800px) {
 
+    .divTema {
+      margin-left: 0;
+    }
+
     .menu {
         display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -97,6 +101,7 @@
       width: 233.905px;
       height: 64px;
       margin: 10px auto;
+      margin-left: 10px;
     }
   
     .links {

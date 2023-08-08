@@ -1,11 +1,3 @@
-.conteudo {
-    background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
-}
-
-.conteudoBoreal {
-    background: linear-gradient(180deg, #393068 0%, #36C1A0 52.60%, #4650BD 100%);
-    color: var(--branco);
-}
 
 .containerMapa {
     display: flex; 
